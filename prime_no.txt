@@ -1,0 +1,24 @@
+            A prime number is a positive integer greater than
+                
+            1 that has no positive integer divisors otherthan
+                
+            1 and itself. In other words, a prime number is a
+                
+            number that cannot be evenly divided by any other
+                
+            number except 1 and itself.
+
+            Here's an example of a prime number:
+
+            Example: 7
+
+            The number 7 is a prime number because it can only
+                
+            be divided by 1 and 7 without leaving a remainder.
+                
+            It has no other divisors.
+
+
+
+
+
