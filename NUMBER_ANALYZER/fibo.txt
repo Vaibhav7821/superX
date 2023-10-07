@@ -1,0 +1,18 @@
+The Fibonacci series is a sequence of numbers where 
+each number is the sum of the two preceding ones, 
+usually starting with 0 and 1. In mathematical terms, 
+it is defined by the recurrence relation:
+
+F(n) = F(n-1) + F(n-2)
+
+with the initial conditions:
+
+F(0) = 0
+F(1) = 1
+
+So, the Fibonacci series begins with 0, 1
+and then each subsequent number is the sum of the 
+two numbers that precede it. Here are the first few
+numbers in the Fibonacci series:
+
+0, 1, 1, 2, 3, 5, 8, 13, 21, 34, ...
