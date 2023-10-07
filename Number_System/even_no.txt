@@ -1,0 +1,17 @@
+                
+                
+                An even number is an integer that  is
+                
+                exactly divisible by 2,meaning it has
+                
+                no remainder  when  divided  by  2.In
+                
+                other words, if you can divide number
+                
+                by 2 and get  a whole  number  result,
+                
+                then that number is even.
+
+                Example:-
+
+                2,4,6,8...
