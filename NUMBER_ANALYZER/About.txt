@@ -1,0 +1,29 @@
+            ”****NUMBER ANALYZER****r”
+
+            ***PROJECT DESCRIPTION***
+    
+    The Number Analyzer project is a collaborative effort by four talented individuals:
+    
+    Pranav Dattatray Pisal, Vaibhav Navnath Gawali, Sagar Pandharinath Thete,
+    
+    and Omkar Balasaheb Darekar. This project is designed to provide users with a   
+    
+    comprehensive tool for analyzing numbers from 1 to 100 based on various mathematical properties.
+
+                **FEATURES**
+
+    With a simple click, you can highlight that specific numbers in the range (1-100).
+    You'll also receive an explanation of numbers in the textbox.
+
+    We've introduced a "CheckNumber" button that allows users to input a number.
+    After entering a number and clicking this button,
+    the project will determine which property the number belongs to (odd, even, prime, perfect, or Armstrong).
+    The explanation will be displayed in the textbox.
+
+            WHY OUR PROJECT...?
+    Our Number Analyzer project simplifies the process of understanding and identifying different types of numbers.
+    It's not just a tool for mathematical analysis but also an educational resource for exploring the properties of numbers.
+    Whether you're a student, a teacher, or simply someone curious about numbers,
+    this project is designed to make number analysis accessible and fun.
+
+    Thank you for using Number Analyzer!
