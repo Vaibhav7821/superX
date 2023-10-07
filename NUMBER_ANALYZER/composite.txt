@@ -1,0 +1,13 @@
+    A composite number is a positive integer greater than 1
+
+    that is not a prime number. In other words, a composite number
+
+    has factors other than 1 and itself. It can be divided evenly
+
+    by at least one positive integer other than 1 and itself.
+
+    For example:
+
+    4 is a composite number because it can be evenly divided by 1, 2, and 4.
+    9 is a composite number because it can be evenly divided by 1, 3, and 9.
+    15 is a composite number because it can be evenly divided by 1, 3, 5, and 15.
