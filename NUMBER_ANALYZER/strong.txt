@@ -1,0 +1,21 @@
+    A strong number (or strong integer) is a special type of number in mathematics.
+    
+    It is a number whose sum of the factorial of its digits is equal to the number itself.
+    
+    To determine if a number is a strong number, you need to follow these steps:
+    1. Break the number into its individual digits.
+    2. Compute the factorial of each digit.
+    3. Add up the factorials of all the digits.
+    4. Check if the sum is equal to the original number.
+    
+    For example, let's take the number 145:
+    1. Break it into its digits: 1, 4, and 5.
+    2. Compute the factorial of each digit: 1! = 1, 4! = 24, and 5! = 120.
+    3. Add up the factorials: 1 + 24 + 120 = 145.
+    4. Since the sum of the factorials (145) is equal to the original number (145),
+    145 is a strong number.
+    
+    In contrast, if the sum of the factorials of the digits does not equal the original number,
+    then it is not a strong number.
+    Strong numbers are relatively rare and are primarily of mathematical interest. 
+    They are sometimes called "strong integers" or "strong factorial numbers.

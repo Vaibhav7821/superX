@@ -5,7 +5,6 @@ import java.io.IOException;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
 import javafx.animation.Timeline;
-import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -120,9 +119,13 @@ public class Vaibhav {
         Button aboutButton = createGlowButton("ABOUT", Color.GRAY);
         aboutButton.setFont(buttonFont);
         aboutButton.setMaxWidth(140);
-         Button backButton = createGlowButton("BACK", Color.BLACK);
+        Button backButton = createGlowButton("BACK", Color.BLACK);
         backButton.setFont(buttonFont);
         backButton.setMaxWidth(140);
+
+        Button strongButton = createGlowButton("STRONG", Color.CYAN);
+        strongButton.setFont(buttonFont);
+        strongButton.setMaxWidth(140);
 
         evenButton.setOnAction(e -> highlightEvenNumbers(evenButton));
         oddButton.setOnAction(e -> highlightOddNumbers(oddButton));
@@ -130,7 +133,8 @@ public class Vaibhav {
         armstrongButton.setOnAction(e -> highlightArmstrongNumbers(armstrongButton));
         perfectButton.setOnAction(e -> highlightPerfectNumbers(perfectButton)); 
         compositeButton.setOnAction(e -> highlightCompositeNumbers(compositeButton));
-        fiboButton.setOnAction(e -> highlightFiboNumbers(compositeButton));
+        strongButton.setOnAction(e -> highlightStrongNumbers(strongButton));
+        fiboButton.setOnAction(e -> highlightFiboNumbers(fiboButton));
         aboutButton.setOnAction(e -> printAbout());
         backButton.setOnAction(e -> {
             
@@ -142,7 +146,7 @@ public class Vaibhav {
            
         });
 
-        buttonVBox.getChildren().addAll(evenButton, oddButton, primeButton, armstrongButton, perfectButton,compositeButton,fiboButton);
+        buttonVBox.getChildren().addAll(evenButton, oddButton, primeButton,compositeButton, armstrongButton, perfectButton,strongButton,fiboButton);
         buttonVBox.setAlignment(Pos.TOP_LEFT); // Align buttons to the left
         buttonVBox.setPadding(new Insets(10, 20, 30, 20)); // Adjust padding as needed
 
@@ -152,7 +156,7 @@ public class Vaibhav {
       
         aboutVBox.setPadding(new Insets(0, 20, 0, 20));
         
-        VBox cmVBox =  new VBox(340);
+        VBox cmVBox =  new VBox(290);
         cmVBox.getChildren().addAll(buttonVBox,aboutVBox);
         root.setLeft(cmVBox);
 
@@ -180,19 +184,19 @@ public class Vaibhav {
         rightVBox.setAlignment(Pos.CENTER_RIGHT);
 
         // Added TextArea to the right side
-        textArea.setPrefWidth(600);
-        textArea.setPrefHeight(700); // Set the preferred height
+        textArea.setPrefWidth(650);
+        textArea.setPrefHeight(750); // Set the preferred height
         textArea.setEditable(false);
         textArea.setStyle("-fx-font-family: 'Calibri'");
         textArea.setStyle("-fx-control-inner-background: BLACK");
 
-        Font font1 = Font.font("Arial", FontWeight.BOLD, 20);
+        Font font1 = Font.font("Times New Roman", FontWeight.BOLD, 20);
 
         textArea.setFont(font1);
 
         Insets textAreaMargins = new Insets(100, 70, 150,10 ); // Adjust the left margin as needed
 
- //       // Set the margins for the textArea
+        // Set the margins for the textArea
         VBox.setMargin(textArea, textAreaMargins);
 
         //root.setRight(rightVBox);
@@ -212,7 +216,6 @@ public class Vaibhav {
         
     }
 
-    // Rest of your code...
 public static Button createGlowButton(String text, Color glowColor) {
         Button button = new Button(text);
         button.setStyle("-fx-base: " + toHex(glowColor) + ";");
@@ -256,7 +259,7 @@ public static Button createGlowButton(String text, Color glowColor) {
         }
         //startButtonBlinking(button);
 
-        readFile("C:\\Users\\Vaibhav\\Desktop\\java\\NumberChecker\\src\\even_no.txt");
+        readFile("C:\\Users\\Pranav Pisal\\OneDrive\\Desktop\\VSCODE\\C2W_Project\\Original_Project\\even_no.txt");
     }
 
     public void readFile(String filePath) {
@@ -322,7 +325,7 @@ public static Button createGlowButton(String text, Color glowColor) {
             }
         }
         //startButtonBlinking(button);
-        readFile("C2W_Project\\Original_Project\\fibo.txt");
+        readFile("C:\\Users\\Pranav Pisal\\OneDrive\\Desktop\\VSCODE\\C2W_Project\\Original_Project\\fibo.txt");
     }
     private void highlightCompositeNumbers(Button button) {
         stopBlinking();
@@ -354,6 +357,22 @@ public static Button createGlowButton(String text, Color glowColor) {
         //startButtonBlinking(button);
         readFile("C:\\Users\\Pranav Pisal\\OneDrive\\Desktop\\VSCODE\\C2W_Project\\Original_Project\\Amstrong_no.txt");
     }
+
+    private void highlightStrongNumbers(Button button) {
+        stopBlinking();
+        for (int i = 0; i < numberTexts.length; i++) {
+            int number = Integer.parseInt(numberTexts[i].getText());
+
+            if (isStrong(number)) {
+                startBlinking(numberRectangles[i], Color.CYAN);
+            } else {
+                resetHighlight(numberRectangles[i]);
+            }
+        }
+        //startButtonBlinking(button);
+        readFile("C:\\Users\\Pranav Pisal\\OneDrive\\Desktop\\VSCODE\\C2W_Project\\Original_Project\\strong.txt");
+    }
+
 
     private void highlightPerfectNumbers(Button button) {
         stopBlinking();
@@ -407,7 +426,26 @@ public static Button createGlowButton(String text, Color glowColor) {
         }
     }
 
-    private boolean isPrime(int number) {
+    public static boolean isStrong(int num){
+        int sum=0;
+        int temp =num;
+        while(num>0){
+            int rem = num%10,fact=1;
+            while(rem>0){
+                fact*=rem;
+                rem--;
+            }
+            sum+=fact;
+            num/=10;
+        }
+        if(sum==temp){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    static boolean isPrime(int number) {
         if (number <= 1) {
             return false;
         }
@@ -418,7 +456,7 @@ public static Button createGlowButton(String text, Color glowColor) {
         }
         return true;
     }
-    private boolean isFibo(int number) {
+    static boolean isFibo(int number) {
         // Initialize the first two numbers in the Fibonacci series
         int prev = 0;
         int current = 1;
