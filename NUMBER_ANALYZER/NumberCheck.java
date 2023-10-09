@@ -52,9 +52,12 @@ public class NumberCheck extends Application {
             if(Vaibhav.isStrong(number)){
                 sb.append("        "+number+" is Strong Number.\n");
             }
-          
-            
-            
+            if(Vaibhav.isAuto(number)){
+                sb.append("        "+number+" is Automorphic Number.\n");
+            }
+            if(Vaibhav.isDuck(number)){
+                sb.append("        "+number+" is Duck Number.\n");
+            }
 
             String str = sb.toString();
             //showAlert(str);

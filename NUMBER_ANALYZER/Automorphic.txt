@@ -1,0 +1,26 @@
+    An automorphic number, also known as a circular 
+    
+    number or a permutational number, is a type of 
+    
+    integer in mathematics. An automorphic number 
+    
+    is defined as a number whose square (or some 
+    
+    other power) ends with the same digits as the
+    
+    number itself. In other words, an n-digit 
+    
+    number is considered automorphic if, when you
+    
+    square it and look at the last n digits of the 
+    
+    result, they are the same as the original number.
+
+    5 is an automorphic number because 5^2 = 25, 
+    and the last digit of 25 is 5.
+
+    76 is an automorphic number because 76^2 = 5776, 
+    and the last two digits of 5776 are 76.
+
+    376 is an automorphic number because 376^2 = 141376,
+    and the last three digits of 141376 are 376.

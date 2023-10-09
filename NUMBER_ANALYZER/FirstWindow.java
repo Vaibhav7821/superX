@@ -19,8 +19,8 @@ public class FirstWindow extends Application {
     @Override
     public void start(Stage primaryStage) {
         // Create the primary window
-    
-        primaryStage.setTitle("Primary Window");
+        
+        primaryStage.setTitle("MODULUS");
         StackPane primaryLayout = new StackPane();
 
         Image backgroundImage = new Image("img5.jpg");
@@ -46,16 +46,13 @@ public class FirstWindow extends Application {
 
         primaryLayout.getChildren().add(backgroundImageView);
 
-        Font buttonFont = Font.font("Times New Roman", 15);
+        Font buttonFont = Font.font("Times New Roman",15);
         Button switchButton = createGlowButton("LAUNCH PROJECT", Color.BROWN);
         switchButton.setFont(buttonFont);
 
         Vaibhav obj1 = new Vaibhav();
         
-        switchButton.setOnAction(e -> {obj1.nextWindow(primaryStage);
-       
-        }
-        );
+        switchButton.setOnAction(e -> obj1.nextWindow(primaryStage));
 
         VBox vb = new VBox(100);
         vb.getChildren().add(switchButton);
@@ -81,7 +78,7 @@ public class FirstWindow extends Application {
         Scene primaryScene = new Scene(primaryLayout, 1366, 768);
         primaryStage.setScene(primaryScene);
        
-         
+        primaryStage.setResizable(false);
         primaryStage.show();
 
     }
