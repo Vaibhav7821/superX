@@ -43,7 +43,21 @@ public class NumberCheck extends Application {
             if(isPerfect(number)){
                 sb.append("        "+number+" is Perfect Number\n");
             }
-            
+              if(false == Vaibhav.isPrime(number)){
+                sb.append("        "+number+" is Composite Number \n");
+            }
+            if(Vaibhav.isFibo(number)){
+                sb.append("        "+number+" is Part of Fibonacci Series.\n");
+            }
+            if(Vaibhav.isStrong(number)){
+                sb.append("        "+number+" is Strong Number.\n");
+            }
+            if(Vaibhav.isAuto(number)){
+                sb.append("        "+number+" is Automorphic Number.\n");
+            }
+            if(Vaibhav.isDuck(number)){
+                sb.append("        "+number+" is Duck Number.\n");
+            }
 
             String str = sb.toString();
             //showAlert(str);
@@ -76,14 +90,6 @@ static void showAlert(String content) {
             }
         }
         return true;
-    }
-
-    private boolean isComposite(int number) {
-        
-        if(isPrime(number)){
-            return false;
-        }else
-            return true;
     }
 
     // Function to check if a number is Armstrong

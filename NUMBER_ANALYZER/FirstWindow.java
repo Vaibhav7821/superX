@@ -19,20 +19,21 @@ public class FirstWindow extends Application {
     @Override
     public void start(Stage primaryStage) {
         // Create the primary window
-    
-        primaryStage.setTitle("Primary Window");
+        
+        primaryStage.setTitle("MODULUS");
         StackPane primaryLayout = new StackPane();
 
-        Image backgroundImage = new Image("blackAba.jpeg");
+        Image backgroundImage = new Image("img5.jpg");
         ImageView backgroundImageView = new ImageView(backgroundImage);
 
-        Image image = new Image("tirthrup.jpg");
-
+        Image image = new Image("master.png");
+        Image img = new Image("Vaibhav.jpg");
+        primaryStage.getIcons().add(img);
         ImageView imageView = new ImageView(image);
         backgroundImageView.fitWidthProperty().bind(primaryStage.widthProperty());
         backgroundImageView.fitHeightProperty().bind(primaryStage.heightProperty());
 
-        Image image1 = new Image("backIntro.png");
+        Image image1 = new Image("team.png");
 
         ImageView imageView1 = new ImageView(image1);
         backgroundImageView.fitWidthProperty().bind(primaryStage.widthProperty());
@@ -42,27 +43,16 @@ public class FirstWindow extends Application {
         imageView1.setFitHeight(700);
         imageView.setFitWidth(500); // Set the desired width
         imageView.setFitHeight(700);
-        // Set the desired heigh
-        // Set the position of the HBox (move it to the right)
-
-        // Add the ImageView to the container
 
         primaryLayout.getChildren().add(backgroundImageView);
 
-        // Create a button to switch to another window
-        // Button switchButton = new Button( "SwitchWindow", Color.CRIMSON);
-        Font buttonFont = Font.font("Calibri", 20);
+        Font buttonFont = Font.font("Times New Roman",15);
         Button switchButton = createGlowButton("LAUNCH PROJECT", Color.BROWN);
         switchButton.setFont(buttonFont);
 
         Vaibhav obj1 = new Vaibhav();
         
-        switchButton.setOnAction(e -> {obj1.nextWindow(primaryStage);
-       
-        }
-        );
-                // BorderPane.setMargin(switchButton, new Insets(10, 20, 300, 400));
-        // StackPane primaryLayout = new StackPane();
+        switchButton.setOnAction(e -> obj1.nextWindow(primaryStage));
 
         VBox vb = new VBox(100);
         vb.getChildren().add(switchButton);
@@ -88,7 +78,7 @@ public class FirstWindow extends Application {
         Scene primaryScene = new Scene(primaryLayout, 1366, 768);
         primaryStage.setScene(primaryScene);
        
-         
+        primaryStage.setResizable(false);
         primaryStage.show();
 
     }

@@ -1,0 +1,30 @@
+    In mathematics, a "duck number" is a term used 
+    
+    to describe a special type of number that has 
+    
+    a particular property when its digits are
+    
+    analyzed. A number is considered a duck number 
+    
+    if it contains at least one instance of the 
+    
+    digit zero (0), and when this digit is removed,
+    
+    the resulting number is not equal to zero. 
+    
+    In other words, a duck number is a positive 
+    
+    integer that has at least one zero in its 
+    
+    decimal representation, but removing that 
+    
+    zero leaves a nonzero integer.
+
+    1024: Removing the zero gives 124, 
+    which is not zero.
+
+    207: Removing the zero gives 27, 
+    which is not zero.
+
+    30506: Removing any of the zeros 
+    gives 356, which is not zero.
